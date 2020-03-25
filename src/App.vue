@@ -3,14 +3,17 @@
 	<div class='body-container'>
 		<div id="nav">
 			<router-link to="/">Home</router-link> |
-			<router-link to="/Operators">Operators</router-link> |
-			<router-link :to="{ name: 'Operator', params: {OperatorName: 'random' }}">Random Operator</router-link>
+			<router-link to="/Operators">Operators</router-link>
 		</div>
 		<div class="content-wrapper">
 			<router-view />
+      <div class='footer'>
+                  <div class='footer-item footer-one'></div>
+                  <div class='footer-item footer-two'><a href="https://github.com/tyson-rodriguez25/creative_project3.git" class="github-link">Github</a></div>
+                  <div class='footer-item footer-three'></div>
+          </div>
 		</div>
 	</div>
-	<Footer />
 </div>
 </template>
 
@@ -80,5 +83,32 @@ body {
 		margin: 0%;
 		padding: 0% 15% 3% 15%;
 	}
+}
+
+.footer {
+        display: flex;
+        justify-content: space-between;
+}
+
+.footer-item {
+        border: 1px solid #FFF;
+        background-color: #A9A9A9;
+        height: 30px;
+        flex: 1;
+}
+
+.footer-one, .footer-three {
+        background-color: #888888;
+        flex: initial;
+        width: 300px;
+}
+
+.github-link {
+        display: flex;
+        justify-content: center;
+        font-size:16px;
+}
+a {
+        color: #000000;
 }
 </style>

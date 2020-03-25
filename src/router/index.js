@@ -21,7 +21,6 @@ const routes = [
   path: '/operators/:id',
   name: 'OperatorBio',
   component: OperatorBio,
-  props: true
 }
 ]
 

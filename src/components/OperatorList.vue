@@ -6,9 +6,8 @@
       <img :src="'/images/Operators/'+ operator.image">
     </div>
       <div class="info">
-        <router-link :to="{ name: 'Operator', params: {operatorName: operator.operators }}">{{operator.operator}}</router-link>
+          <router-link :to="'/operators/' + operator.id">{{operator.operator}}</router-link>
       </div>
-
     </div>
   </div>
 </div>
@@ -35,6 +34,7 @@ export default {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
+
 }
 
 .operator {
@@ -57,7 +57,8 @@ export default {
 }
 
 .operator a {
-	color: #000000
+	color: #000000;
+  font-family: "Bahnschrift", "Calibri", sans-serif !important;
 }
 
 .info {
